@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { infoPagina } from '../../interfaces/infoPagina.1';
+import { InfoPaginaService } from '../../services/info-pagina.service';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  // tslint:disable-next-line: no-shadowed-variable
+  // tslint:disable-next-line: variable-name
+  constructor(public _servicio: InfoPaginaService) { }
 
   ngOnInit(): void {
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InfoPaginaService } from '../../services/info-pagina.service';
 
 @Component({
   selector: 'app-footer',
@@ -6,8 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
+  public get servicio(): InfoPaginaService {
+    return this._servicio;
+  }
+  public set servicio(value: InfoPaginaService) {
+    this._servicio = value;
+  }
+
   anio: number = new Date().getFullYear();
-  constructor() { }
+  // tslint:disable-next-line: variable-name
+  constructor(public _servicio: InfoPaginaService) { }
 
   ngOnInit(): void {
   }

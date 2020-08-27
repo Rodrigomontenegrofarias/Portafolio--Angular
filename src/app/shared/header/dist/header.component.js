@@ -6,33 +6,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
-exports.FooterComponent = void 0;
+exports.HeaderComponent = void 0;
 var core_1 = require("@angular/core");
-var FooterComponent = /** @class */ (function () {
+var HeaderComponent = /** @class */ (function () {
+    // tslint:disable-next-line: no-shadowed-variable
     // tslint:disable-next-line: variable-name
-    function FooterComponent(_servicio) {
+    function HeaderComponent(_servicio) {
         this._servicio = _servicio;
-        this.anio = new Date().getFullYear();
     }
-    Object.defineProperty(FooterComponent.prototype, "servicio", {
-        get: function () {
-            return this._servicio;
-        },
-        set: function (value) {
-            this._servicio = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    FooterComponent.prototype.ngOnInit = function () {
+    HeaderComponent.prototype.ngOnInit = function () {
     };
-    FooterComponent = __decorate([
+    HeaderComponent = __decorate([
         core_1.Component({
-            selector: 'app-footer',
-            templateUrl: './footer.component.html',
-            styleUrls: ['./footer.component.css']
+            selector: 'app-header',
+            templateUrl: './header.component.html',
+            styleUrls: ['./header.component.css']
         })
-    ], FooterComponent);
-    return FooterComponent;
+    ], HeaderComponent);
+    return HeaderComponent;
 }());
-exports.FooterComponent = FooterComponent;
+exports.HeaderComponent = HeaderComponent;
