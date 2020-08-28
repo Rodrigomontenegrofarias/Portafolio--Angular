@@ -6,23 +6,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
-exports.AppComponent = void 0;
+exports.AboutComponent = void 0;
 var core_1 = require("@angular/core");
-var AppComponent = /** @class */ (function () {
-    function AppComponent(infoPaginaService, 
-    // tslint:disable-next-line: no-shadowed-variable
-    ProductosService) {
-        this.infoPaginaService = infoPaginaService;
-        this.ProductosService = ProductosService;
-        this.title = 'portafolio';
+var AboutComponent = /** @class */ (function () {
+    function AboutComponent(infoService) {
+        this.infoService = infoService;
     }
-    AppComponent = __decorate([
+    AboutComponent.prototype.ngOnInit = function () {
+    };
+    AboutComponent = __decorate([
         core_1.Component({
-            selector: 'app-root',
-            templateUrl: './app.component.html',
-            styleUrls: ['./app.component.css']
+            selector: 'app-about',
+            templateUrl: './about.component.html',
+            styleUrls: ['./about.component.css']
         })
-    ], AppComponent);
-    return AppComponent;
+    ], AboutComponent);
+    return AboutComponent;
 }());
-exports.AppComponent = AppComponent;
+exports.AboutComponent = AboutComponent;
