@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { infoPagina } from '../../interfaces/infoPagina.1';
 import { InfoPaginaService } from '../../services/info-pagina.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,11 +9,23 @@ import { InfoPaginaService } from '../../services/info-pagina.service';
 })
 export class HeaderComponent implements OnInit {
 
-  // tslint:disable-next-line: no-shadowed-variable
   // tslint:disable-next-line: variable-name
-  constructor(public _servicio: InfoPaginaService) { }
+  constructor( public _servicio: InfoPaginaService,
+               private router: Router) { }
 
-  ngOnInit(): void {
+  // tslint:disable-next-line: typedef
+  ngOnInit() {
+  }
+
+  // tslint:disable-next-line: typedef
+  buscarProducto( termino: string ) {
+
+    if ( termino.length < 1 ) {
+      return;
+    }
+
+    this.router.navigate(['/search', termino]);
+
   }
 
 }

@@ -9,12 +9,20 @@ exports.__esModule = true;
 exports.HeaderComponent = void 0;
 var core_1 = require("@angular/core");
 var HeaderComponent = /** @class */ (function () {
-    // tslint:disable-next-line: no-shadowed-variable
     // tslint:disable-next-line: variable-name
-    function HeaderComponent(_servicio) {
+    function HeaderComponent(_servicio, router) {
         this._servicio = _servicio;
+        this.router = router;
     }
+    // tslint:disable-next-line: typedef
     HeaderComponent.prototype.ngOnInit = function () {
+    };
+    // tslint:disable-next-line: typedef
+    HeaderComponent.prototype.buscarProducto = function (termino) {
+        if (termino.length < 1) {
+            return;
+        }
+        this.router.navigate(['/search', termino]);
     };
     HeaderComponent = __decorate([
         core_1.Component({

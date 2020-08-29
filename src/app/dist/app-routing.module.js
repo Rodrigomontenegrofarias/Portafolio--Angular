@@ -12,10 +12,12 @@ var router_1 = require("@angular/router");
 var portafolio_component_1 = require("./pages/portafolio/portafolio.component");
 var about_component_1 = require("./pages/about/about.component");
 var item_component_1 = require("./pages/item/item.component");
+var search_component_1 = require("./pages/search/search.component");
 var routes = [
     { path: 'home', component: portafolio_component_1.PortafolioComponent },
     { path: 'about', component: about_component_1.AboutComponent },
-    { path: 'item', component: item_component_1.ItemComponent },
+    { path: 'item/:id', component: item_component_1.ItemComponent },
+    { path: 'search/:termino', component: search_component_1.SearchComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -23,8 +25,12 @@ var AppRoutingModule = /** @class */ (function () {
     }
     AppRoutingModule = __decorate([
         core_1.NgModule({
-            imports: [router_1.RouterModule.forRoot(routes, { useHash: true })],
-            exports: [router_1.RouterModule]
+            imports: [
+                router_1.RouterModule.forRoot(routes, { useHash: true })
+            ],
+            exports: [
+                router_1.RouterModule
+            ]
         })
     ], AppRoutingModule);
     return AppRoutingModule;
